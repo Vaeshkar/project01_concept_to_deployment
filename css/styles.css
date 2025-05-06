@@ -1,110 +1,156 @@
 /* styles for the time travel page */
 
-/* Root styles */
+/* Root styles */ 
 :root {
-    --color-background: #0B0F2C; /* Dark Space Blue */
-    --color-section-background: #0D112D; /* Darker Navy */
-    --color-background-gradient: linear-gradient(0deg, #141c5c 0%, #0D112D 100%); /* Gradient from Dark Space Blue to Darker Navy */
-    --color-primary-button: #2979FF; /* Bright Blue */
-    --color-button-hover: #5393FF; /* Lighter Blue */
-    --color-text: #FFFFFF; /* White */
-    --color-secondary-text: #C0C6DC; /* Light Gray */
-
-    --border-radius: .625rem; 
+    --color-background: #FFFCE6; 
+    --color-section-background: #7BAE7F; 
+    --color-primary-button: #698760;
+    --color-button-hover: #563827;
+    --color-footer-text: #69511D;
+    --color-text: #3E322D; 
+    --color-headline-text: #495246;
+    --color-bento-red: #E8B58E;
+    --color-bento-green-light: #B2D8B5;
+    --border-radius: 20px; 
+    --border-radius-small: 10px;
 }
 
 /* Fonts */
-.quantico-regular {
-    font-family: "Quantico", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-.quantico-bold {
-    font-family: "Quantico", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&display=swap');
 
-.roboto-flex-regular {
-    font-family: "Roboto Flex", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-        "slnt" 0,
-        "wdth" 100,
-        "GRAD" 0,
-        "XOPQ" 96,
-        "XTRA" 468,
-        "YOPQ" 79,
-        "YTAS" 750,
-        "YTDE" -203,
-        "YTFI" 738,
-        "YTLC" 514,
-        "YTUC" 712;
-  }
-
-/* Animations styles */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.lato-thin {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
 }
 
-/* Animations start settings */
-.hero-section h1,
-.hero-section .subline,
-.hero-section .cta-button {
-    opacity: 0; /* Start hidden */
+.lato-light {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
-/* Animations settings */
-.hero-section h1 {
-    animation: fadeInUp 1s ease-out forwards;
-    animation-delay: 0.2s;
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.hero-section .subline {
-    animation: fadeInUp 1s ease-out forwards;
-    animation-delay: 0.5s;
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
-.hero-section .cta-button {
-    animation: fadeInUp 0.8s ease-out forwards;
-    animation-delay: 3.5s;
+.lato-black {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
 }
 
+.lato-thin-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.lato-light-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.lato-regular-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.lato-bold-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.lato-black-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-size: 56px;
+  line-height: 56px;
+}
+
+/* HTML BODY Styles */
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
+  transition: all 0.4s ease;
+}
   
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #FAF6F0;
-  color: #3E322D;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  transform: scale(0.8);
+  transition: all 0.4s ease;
+}
+
+.logo:hover {
+  transform: scale(0.7);
+  cursor: pointer;
+}
+
 header {
-  background-color: #7BAE7F;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 header nav a {
+  background-color: var(--color-primary-button);
+  padding: 10px 20px;
+  border-radius: var(--border-radius-small);
   margin-left: 1rem;
   text-decoration: none;
   color: #FAF6F0;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 400;
+  transition: all 0.4s ease;
 }
+
+header nav a:hover {
+  background-color: var(--color-button-hover);
+}
+
 .hero {
   background: linear-gradient(#F1F9F1, #FAF6F0);
   text-align: center;
   padding: 4rem 2rem;
 }
+
 .mission-goal {
   background-color: #E0E0D9;
   display: flex;
@@ -112,6 +158,7 @@ header nav a {
   gap: 2rem;
   padding: 4rem 2rem;
 }
+
 .mission, .goal {
   background: white;
   padding: 2rem;
@@ -119,16 +166,19 @@ header nav a {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   flex: 1;
 }
+
 .products {
   background-color: #F1F9F1;
   padding: 4rem 2rem;
 }
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
+
 .product-card {
   background: white;
   padding: 1rem;
@@ -136,33 +186,39 @@ header nav a {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   text-align: center;
 }
+
 .about {
   background-color: #E0E0D9;
   padding: 4rem 2rem;
   text-align: center;
 }
+
 .founders {
   display: flex;
   justify-content: center;
   gap: 2rem;
   margin-top: 2rem;
 }
+
 .services {
   background-color: #F1F9F1;
   padding: 4rem 2rem;
   text-align: center;
 }
+
 .service-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
+
 .contact {
   background-color: #E0E0D9;
   padding: 4rem 2rem;
   text-align: center;
 }
+
 .contact form {
   display: flex;
   flex-direction: column;
@@ -170,12 +226,14 @@ header nav a {
   max-width: 600px;
   margin: 0 auto;
 }
+
 .contact input, .contact textarea {
   padding: 0.75rem;
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 1rem;
 }
+
 .contact button {
   background-color: #7BAE7F;
   color: white;
@@ -185,19 +243,59 @@ header nav a {
   font-size: 1rem;
   cursor: pointer;
 }
+
 .video {
   background-color: #F1F9F1;
   padding: 4rem 2rem;
   text-align: center;
 }
+
 footer {
-  background-color: #3E322D;
-  color: #FAF6F0;
+  background-color: var(--color-background);
+  color: var(--color-footer-text);
+  font-size: 22px;
   text-align: center;
   padding: 2rem 1rem;
 }
-.footer-nav a {
-  color: #FAF6F0;
-  margin: 0 0.5rem;
-  text-decoration: none;
+
+.footer_flex-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0;
+  gap: 12rem;
+}
+
+.footer-nav, 
+.footer-social-media {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.footer-desclaimer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer-nav {
+  align-items: flex-end;
+  padding-right: 1rem;
+}
+
+.footer-social-media{
+  align-items: flex-start;
+  padding-left: 1rem;
+}
+
+footer a {
+  color: var(--color-footer-text);
+}
+
+footer a:hover {
+  transform: scale(1.1);
+  color: var(--color-headline-text);
 }
