@@ -1,0 +1,203 @@
+/* styles for the time travel page */
+
+/* Root styles */
+:root {
+    --color-background: #0B0F2C; /* Dark Space Blue */
+    --color-section-background: #0D112D; /* Darker Navy */
+    --color-background-gradient: linear-gradient(0deg, #141c5c 0%, #0D112D 100%); /* Gradient from Dark Space Blue to Darker Navy */
+    --color-primary-button: #2979FF; /* Bright Blue */
+    --color-button-hover: #5393FF; /* Lighter Blue */
+    --color-text: #FFFFFF; /* White */
+    --color-secondary-text: #C0C6DC; /* Light Gray */
+
+    --border-radius: .625rem; 
+}
+
+/* Fonts */
+.quantico-regular {
+    font-family: "Quantico", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.quantico-bold {
+    font-family: "Quantico", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+.roboto-flex-regular {
+    font-family: "Roboto Flex", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0,
+        "wdth" 100,
+        "GRAD" 0,
+        "XOPQ" 96,
+        "XTRA" 468,
+        "YOPQ" 79,
+        "YTAS" 750,
+        "YTDE" -203,
+        "YTFI" 738,
+        "YTLC" 514,
+        "YTUC" 712;
+  }
+
+/* Animations styles */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animations start settings */
+.hero-section h1,
+.hero-section .subline,
+.hero-section .cta-button {
+    opacity: 0; /* Start hidden */
+}
+
+/* Animations settings */
+.hero-section h1 {
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+.hero-section .subline {
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.hero-section .cta-button {
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 3.5s;
+}
+
+  
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #FAF6F0;
+  color: #3E322D;
+}
+header {
+  background-color: #7BAE7F;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #FAF6F0;
+  font-weight: bold;
+}
+.hero {
+  background: linear-gradient(#F1F9F1, #FAF6F0);
+  text-align: center;
+  padding: 4rem 2rem;
+}
+.mission-goal {
+  background-color: #E0E0D9;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+}
+.mission, .goal {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  flex: 1;
+}
+.products {
+  background-color: #F1F9F1;
+  padding: 4rem 2rem;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.product-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.about {
+  background-color: #E0E0D9;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.founders {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.services {
+  background-color: #F1F9F1;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.contact {
+  background-color: #E0E0D9;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contact input, .contact textarea {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+.contact button {
+  background-color: #7BAE7F;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.video {
+  background-color: #F1F9F1;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+footer {
+  background-color: #3E322D;
+  color: #FAF6F0;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.footer-nav a {
+  color: #FAF6F0;
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
