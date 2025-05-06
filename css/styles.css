@@ -87,6 +87,7 @@
 
 h1 {
   font-family: 'Lato', sans-serif;
+  font-weight: 900;
   font-size: 56px;
   line-height: 56px;
 }
@@ -97,6 +98,7 @@ h3, h4, p {
 
 .mission h1, .goal h1 {
   margin-bottom: 2rem;
+  color: var(--color-headline-text);
 }
 
 .p_28 {
@@ -145,6 +147,10 @@ main {
   margin: 0 auto;
 }
 
+section {
+  padding: 4rem 2rem;
+}
+
 .logo {
   transform: scale(0.8);
   transition: all 0.4s ease;
@@ -166,6 +172,7 @@ header {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  background-color: var(--color-background);
 }
 
 header nav a {
@@ -194,7 +201,6 @@ header nav a:hover {
   justify-content: center;
   background-color: var(--color-background);
   text-align: center;
-  padding: 4rem 2rem;
 }
 
 .hero-text {
@@ -212,6 +218,12 @@ header nav a:hover {
   gap: 2rem;
   max-width: 500px;
   text-align: left;
+}
+
+.hero-text-wrapper p {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-primary-button);
 }
 
 /* end hero styles */
@@ -492,11 +504,43 @@ header nav a:hover {
   cursor: pointer;
 }
 
+/* video styles */
+
 .video {
   background-color: #F1F9F1;
   padding: 4rem 2rem;
   text-align: center;
 }
+
+.video-container h1 {
+  margin-bottom: 4rem;
+}
+
+.video-placeholder video {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+}
+
+.video-credit {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.video-credit a {
+  color: #555;
+  text-decoration: none;
+}
+
+.video-credit a:hover {
+  text-decoration: underline;
+}
+
+/* end video styles */
+
+/* footer styles */
 
 footer {
   background-color: var(--color-background);
@@ -504,6 +548,9 @@ footer {
   font-size: 22px;
   text-align: center;
   padding: 2rem 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .footer_flex-box {
@@ -547,3 +594,5 @@ footer a:hover {
   transform: scale(1.1);
   color: var(--color-headline-text);
 }
+
+/* end footer styles */
