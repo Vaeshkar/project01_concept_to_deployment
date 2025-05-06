@@ -91,6 +91,10 @@ h1 {
   line-height: 56px;
 }
 
+h3, h4, p {
+  font-family: 'Lato', sans-serif;
+}
+
 .mission h1, .goal h1 {
   margin-bottom: 2rem;
 }
@@ -130,7 +134,7 @@ body {
   font-size: 16px;
   margin: 0;
   font-family: 'Lato', sans-serif;
-  font-weight: 900;
+  font-weight: 400;
   background-color: var(--color-background);
   color: var(--color-text);
 }
@@ -159,6 +163,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 header nav a {
@@ -337,8 +344,6 @@ header nav a:hover {
   background-position: left center;
   background-size: contain;
   background-repeat: no-repeat;
-  overflow: hidden;
-  border-radius: 40px;
 }
 
 /* Bento styling */
@@ -346,7 +351,7 @@ header nav a:hover {
 .empty-tile {
 
   background-color: var(--color-bento-green-light);
-  border-radius: var(--border-radius-small);
+  border-radius: var(--border-radius);
 }
 
 .bento {
@@ -372,6 +377,20 @@ header nav a:hover {
 }
 
 .bento_copy h3 {
+  font-weight: 900;
+  font-size: 28px;
+}
+
+.bento_copy p {
+  font-size: 14px;
+}
+
+.bento_copy h5 {
+  font-weight: 900;
+  font-size: 24px;
+}
+
+.bento_copy h3 {
   margin-bottom: 1rem;
 }
 
@@ -391,7 +410,8 @@ header nav a:hover {
   justify-content: flex-start;
   align-items: flex-end;
   flex-grow: 0;
-  gap: 1rem;
+  max-width: 300px;
+  gap: .3rem;
   padding: 2rem 2rem;
 }
 
