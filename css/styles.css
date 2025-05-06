@@ -357,6 +357,7 @@ header nav a:hover {
 .bento {
   display: flex;
   border-radius: var(--border-radius);
+  height: 450px;
 }
 
 .bento_img {
