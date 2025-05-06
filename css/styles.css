@@ -135,7 +135,7 @@ body {
   margin: 0;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  background-color: var(--color-background);
+  background-color: #fff;
   color: var(--color-text);
 }
 
@@ -270,7 +270,7 @@ header nav a:hover {
 /* products styles */
 
 .products {
-  background-color: #F1F9F1;
+  background-color: var(--color-background);
   padding: 4rem 2rem;
 }
 
