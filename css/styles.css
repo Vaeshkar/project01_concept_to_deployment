@@ -303,59 +303,177 @@ header nav a:hover {
   grid-area: b_product;
 }
 
+.bento_product {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  align-self: end;
+  background-color: var(--color-primary-button);
+  color: var(--color-background);
+  border-radius: var(--border-radius);
+  height: 350px;
+}
+
+.bento_product h1 {
+  padding: 4rem;
+}
+
+.e_product1, .e_product2, .e_product3 {
+  border-radius: var(--border-radius);
+}
+
+.e_product1 {
+  align-self: end;
+  justify-self: end;
+  background: var(--color-bento-red);
+  height: 80px;
+  width: 80px;
+}
+
+.e_product2 {
+  align-self: end;
+  justify-self: center;
+  background: var(--color-bento-green-light);
+  width: 120px;
+  height: 120px;
+}
+
+.e_product3 {
+  align-self: end;
+  justify-self: end;
+  background: var(--color-section-background);
+  width: 100%;
+  height: 160px;
+}
+
 .b_shampoo {
   grid-area: b_shampoo;
   background-color: #D7DABF;
   background-image: url(../images/img_shampoo.png);
-  background-position: left center;
+  background-position: 0% center;
   background-size: contain;
   background-repeat: no-repeat;
+  transition: all 0.4s ease-in-out;
+  filter: brightness(95%);
+}
+
+.b_shampoo:hover {
+  filter: brightness(105%);
+  background-position: -8% center;
+}
+
+.e_shampoo {
+  align-self: center;
+  background: var(--color-section-background);
+  width: 100%;
+  height: 160px;
+  border-radius: var(--border-radius);
 }
 
 .b_comb {
   grid-area: b_comb;
   background-color: #EFE5CF;
   background-image: url(../images/item4_fg_comb.png);
-  background-position: left center;
+  background-position: 0% 50%;
   background-size: contain;
   background-repeat: no-repeat;
+  transition: all 0.4s ease-in-out;
+  filter: brightness(95%);
+
 }
 
+.b_comb:hover {
+  filter: brightness(105%);
+  background-position: -8% 50%;
+}
 
 .b_towels {
   grid-area: b_towels;
   background-color: #EEEAE1;
   background-image: url(../images/img_towels.png);
-  background-position: left center;
+  background-position: 0% 50%;
   background-size: contain;
   background-repeat: no-repeat;
+  transition: all 0.4s ease-in-out;
+  filter: brightness(95%);
+
+}
+
+.b_towels:hover {
+  filter: brightness(105%);
+  background-position: -8% 50%;
+}
+
+.e_towels {
+  align-self: end;
+  background: var(--color-headline-text);
+  width: 100%;
+  height: 160px;
+  border-radius: var(--border-radius);
 }
 
 .b_brush {
   grid-area: b_brush;
   background-color: #F0E7D7;
   background-image: url(../images/item3_fg_brush.png);
-  background-position: left center;
+  background-position: 0% 50%;
   background-size: contain;
   background-repeat: no-repeat;
+  transition: all 0.4s ease-in-out;
+  filter: brightness(95%);
+}
+
+.b_brush:hover {
+  filter: brightness(105%);
+  background-position: -100% 50%;
 }
 
 .b_conditioner {
   grid-area: b_conditioner;
   background-color: #D1D2BB;
   background-image: url(../images/img_conditioner.png);
-  background-position: left center;
+  background-position: 0% 50%;
   background-size: contain;
   background-repeat: no-repeat;
+  transition: all 0.4s ease-in-out;
+  filter: brightness(95%);
+}
+
+.b_conditioner:hover {
+  filter: brightness(105%);
+  background-position: -8% 50%;
+}
+
+.e_conditioner {
+  align-self: start;
+  background: var(--color-primary-button);
+  width: 100%;
+  height: 160px;
+  border-radius: var(--border-radius);
 }
 
 .b_tweezer {
   grid-area: b_tweezer;
   background-color: #d1d6b0;
   background-image: url(../images/img_tweezer.png);
-  background-position: left center;
+  background-position: 0% 50%;
   background-size: contain;
   background-repeat: no-repeat;
+  transition: all 0.4s ease-in-out;
+  filter: brightness(95%);
+}
+
+.b_tweezer:hover {
+  filter: brightness(105%);
+  background-position: -18% 50%;
+}
+
+.e_tweezer {
+  align-self: end;
+  background: var(--color-bento-red);
+  width: 100%;
+  height: 160px;
+  border-radius: var(--border-radius);
 }
 
 /* Bento styling */
@@ -426,15 +544,6 @@ header nav a:hover {
   max-width: 300px;
   gap: .3rem;
   padding: 2rem 2rem;
-}
-
-.bento_product {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--color-headline-text);
-  color: var(--color-background);
-  border-radius: 8px;
 }
 
 .product-card {
