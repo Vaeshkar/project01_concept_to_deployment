@@ -129,6 +129,7 @@ a {
 
 .btn:hover {
   background-color: var(--color-button-hover);
+  cursor: pointer;
 }
 
   
