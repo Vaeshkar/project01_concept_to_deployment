@@ -582,6 +582,47 @@ header nav a:hover {
   margin-top: 2rem;
 }
 
+/* About styles */
+.about-copy {
+  grid-area: about-copy;
+}
+
+.about-founders {
+  grid-area: about-founders;
+}
+
+.about-grid {
+  grid-template-areas: 
+    'about-copy about-copy about-founders about-founders'
+    'about-copy about-copy about-founders about-founders'
+  ;
+} 
+
+.about-founders {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.founder-phoebe {
+  align-self: flex-end;
+}
+
+.founder-dennis {
+  align-self: flex-start;
+}
+
+.founder-dennis img {
+  width: 100%;
+}
+
+/* end about styles */
+
+/* Services styles */
+
+/* end services styles */
+
 /* contact styles */
 
 .contact {
@@ -784,10 +825,11 @@ footer h1 {
 
 footer a {
   color: var(--color-footer-text);
+  transition: all 0.3s ease-in-out;
 }
 
 footer a:hover {
-  transform: scale(1.1);
+  transform: translateX(8px);
   color: var(--color-headline-text);
 }
 
