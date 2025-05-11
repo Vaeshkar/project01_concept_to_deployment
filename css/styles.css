@@ -556,19 +556,6 @@ header nav a:hover {
 
 /* end product styles */
 
-.about {
-  background-color: #E0E0D9;
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.founders {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
 .services {
   background-color: #F1F9F1;
   padding: 4rem 2rem;
@@ -587,34 +574,79 @@ header nav a:hover {
   grid-area: about-copy;
 }
 
-.about-founders {
-  grid-area: about-founders;
+.a-empty1 {
+  grid-area: a-empty1;
+}
+
+.a-empty2 {
+  grid-area: a-empty2;
+}
+
+.about-phoebe {
+  grid-area: about-phoebe;
+}
+
+.about-dennis {
+  grid-area: about-dennis;
 }
 
 .about-grid {
   grid-template-areas: 
-    'about-copy about-copy about-founders about-founders'
-    'about-copy about-copy about-founders about-founders'
+    'about-copy about-copy a-empty1 about-phoebe about-phoebe'
+    'about-copy about-copy about-dennis about-dennis a-empty2'
   ;
-} 
+  background-color: var(--color-section-background);
+}
 
-.about-founders {
+.about-grid > * {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.about-copy {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  background-color: var(--color-background);
+  padding: 2rem;
+  height: 700px;
 }
 
-.founder-phoebe {
-  align-self: flex-end;
+.about-copy p {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  line-height: 1.2;
 }
 
-.founder-dennis {
-  align-self: flex-start;
+.about-phoebe {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: flex-end;
+  background-color: var(--color-background);
+  gap: 2rem;
 }
 
-.founder-dennis img {
-  width: 100%;
+.about-dennis {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  background-color: var(--color-background);
+  gap: 2rem;
+}
+
+.about-dennis p,
+.about-phoebe p {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-dennis img,
+.about-phoebe img {
+  width: auto;
+  max-width: 50%;
+  height: auto;
+  object-fit: contain;
 }
 
 /* end about styles */
