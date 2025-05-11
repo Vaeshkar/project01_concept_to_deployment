@@ -243,7 +243,6 @@ header nav a:hover {
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
   gap: 22px;
-  padding: 44px 88px;
 }
 
 .mission-grid {
@@ -556,19 +555,6 @@ header nav a:hover {
 
 /* end product styles */
 
-.services {
-  background-color: #F1F9F1;
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.service-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
 /* About styles */
 .about-copy {
   grid-area: about-copy;
@@ -652,9 +638,97 @@ header nav a:hover {
 /* end about styles */
 
 /* Services styles */
+.services {
+  background-color: var(--color-background);
+  padding: 4rem 2rem;
+  text-align: center;
+}
 
-/* end services styles */
+.bento-services {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: var(--color-section-background);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  padding-bottom: 4rem;
+  text-align: left;
+  gap: 2rem;
+}
 
+/* Text width reduction */
+.bento-services > * {
+  max-width: 60%;
+}
+
+.bento-services p {
+  font-size: 1.3rem;
+  line-height: 1.2;
+  color: var(--color-background);
+}
+
+.service-list {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 2rem;
+  padding: 2rem 0;
+  justify-content: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-item {
+  flex: 0 0 auto;
+  min-width: 280px;
+  max-width: 320px;
+  background: linear-gradient(to bottom right, #f5f8f0, #dfeadf);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+  min-height: 400px;
+  min-width: 400px;
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-item:hover {
+  transform: scale(1.02);
+}
+
+.service-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 900;
+  color: var(--color-headline-text);
+}
+
+.service-item p {
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.service-item button {
+  background-color: var(--color-primary-button);
+  color: white;
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--border-radius-small);
+  border: none;
+  margin-top: 1.2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.service-item button:hover {
+  background-color: var(--color-button-hover);
+}
 /* contact styles */
 
 .contact {
