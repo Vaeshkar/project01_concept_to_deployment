@@ -114,6 +114,27 @@ Follow us on:
 
 Where every pet leaves a little brighter. 🐾
 
+---
+
+## 🧾 Changelog
+
+### 2025-05-11
+- Finalized full mobile-responsive layout for all sections
+- Implemented hamburger menu for navigation
+- Restructured bento layout on small screens
+- Fixed background image alignment issues
+- Added consistent max-width for grid sections
+- Cleaned up empty divs on mobile view
+
+---
+
+## 📸 Mobile Preview
+
+Responsive demo tested on iPhone 14 Pro Max:  
+![Mobile Screenshot](./assets/mobile-preview.jpeg)
+
+---
+
 Names:  
 Dennis
 
