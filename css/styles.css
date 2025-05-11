@@ -161,7 +161,7 @@ section {
 
 /* Header styles */
 
-.logo:hover {
+logo:hover {
   transform: scale(0.7);
   cursor: pointer;
 }
@@ -176,6 +176,10 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   background-color: var(--color-background);
+}
+
+header nav {
+  display: flex;
 }
 
 header nav a {
@@ -194,6 +198,19 @@ header nav a:hover {
   background-color: var(--color-button-hover);
 }
 
+/* Hamburger menu styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: var(--color-primary-button);
+  margin: 4px 0;
+}
 /* end header styles */
 
 /* hero styles */
@@ -488,12 +505,18 @@ header nav a:hover {
 .bento {
   display: flex;
   border-radius: var(--border-radius);
-  height: 450px;
+  height: 600px;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .bento_img {
   width: 100%;
-  height: 300px; /* or bigger if you want */
+  height: 50%;
   object-fit: contain;
   display: flex;
   justify-content: center;
@@ -504,9 +527,7 @@ header nav a:hover {
   height: auto;
 }
 
-.bento_copy {
-  padding: 2rem 1rem;
-}
+/* .bento_copy padding is set below */
 
 .bento_copy h3 {
   font-weight: 900;
@@ -539,10 +560,10 @@ header nav a:hover {
 .bento_copy {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: flex-end;
-  flex-grow: 0;
-  max-width: 300px;
+  flex-grow: 1;
+  max-width: 100%;
   gap: .3rem;
   padding: 2rem 2rem;
 }
@@ -932,3 +953,133 @@ footer a:hover {
 }
 
 /* end footer styles */
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  h1 {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+  header nav {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-active {
+    display: flex !important;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-text {
+    padding-left: 0;
+  }
+
+  .hero-text-wrapper {
+    text-align: center;
+  }
+
+  .grid,
+  .about-grid,
+  .mission-grid,
+  .product-grid {
+    display: block;
+  }
+
+  .grid > *,
+  .about-grid > *,
+  .mission-grid > *,
+  .product-grid > * {
+    margin-bottom: 2rem;
+  }
+
+  .b_shampoo,
+  .b_comb,
+  .b_towels,
+  .b_brush,
+  .b_conditioner,
+  .b_tweezer {
+    background-position: 0 top;
+  }
+
+  .b_shampoo:hover,
+  .b_comb:hover,
+  .b_towels:hover,
+  .b_brush:hover,
+  .b_conditioner:hover,
+  .b_tweezer:hover {
+    background-position: 0 top;
+  }
+  
+  .bento-services > * {
+    max-width: 100%;
+  }
+
+  .about-phoebe,
+  .about-dennis {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-phoebe img,
+  .about-dennis img {
+    max-width: 80%;
+  }
+
+  .service-item {
+    min-width: 260px;
+    aspect-ratio: 1 / 1;
+  }
+
+  .contact_container {
+  flex-direction: column;
+  }
+  .footer_flex-box {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  footer {
+  text-align: left;
+  padding-left: 2rem;
+  }
+
+  .footer_flex-box {
+    align-items: flex-start;
+  }
+
+  .footer-nav,
+  .footer-social-media {
+    align-items: flex-start;
+  }
+
+  .footer-social-media {
+    padding-left: 0;
+  }
+
+  .footer-desclaimer {
+    flex-direction: column-reverse;
+  }
+}
+  .empty,
+  .e_product1,
+  .e_product2,
+  .e_product3,
+  .e_shampoo,
+  .e_towels,
+  .e_conditioner,
+  .e_tweezer,
+  .a-empty1,
+  .a-empty2 {
+    display: none;
+  }
